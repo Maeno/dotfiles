@@ -59,6 +59,11 @@
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "C-x b") 'helm-buffers-list)
 
+(when (eq system-type 'darwin)
+  (setq ns-command-modifier (quote meta))
+  (setq ns-alternate-modifier (quote super))
+  )
+
 
 
 

@@ -43,5 +43,23 @@
 ;; color-theme
 (load-theme 'tango-dark)
 
+;; for window system
+(if window-system
+    (progn (set-frame-parameter nil 'alpha 92)))
+
+;; full screen
+(set-frame-parameter nil 'fullscreen 'fullboth)
+
+;; key-bind
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <down>") 'windmove-down)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+
+(define-key global-map (kbd "M-x") 'helm-M-x)
+(define-key global-map (kbd "C-x b") 'helm-buffers-list)
+
+
+
 
 

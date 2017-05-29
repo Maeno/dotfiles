@@ -27,6 +27,8 @@
      (define-key helm-map (kbd "C-h") 'backward-delete-char)
      ))
 
+(setq recentf-max-saved-items nil)
+
 ;; Uses C-h as the backspace key.
 (global-set-key "\C-h" 'delete-backward-char)
 

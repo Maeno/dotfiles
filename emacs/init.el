@@ -88,4 +88,9 @@
   (setq mac-pass-control-to-system nil)
   )
 
+;; emacs server mode
+(require 'server)
+(unless (server-running-p) (server-start))
+
+
 

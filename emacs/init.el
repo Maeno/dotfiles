@@ -12,7 +12,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ddskk helm))))
+ '(package-selected-packages (quote (magit ddskk helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -74,7 +74,7 @@
   (setq skk-server-portnum 1178)
   (setq skk-server-host "localhost")
 
-  (global-set-key "\C-x\C-j" 'skk-mode)
+  (global-set-key "\C-xj" 'skk-mode)
 
   (add-hook 'isearch-mode-hook
 	    (function (lambda ()
@@ -91,6 +91,9 @@
 ;; emacs server mode
 (require 'server)
 (unless (server-running-p) (server-start))
+
+;; Magit
+(require 'magit)
 
 
 

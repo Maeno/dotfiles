@@ -4,6 +4,13 @@ export PATH=/usr/local/bin:$PATH
 plugins=(git osx brew)
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH="${PYENV_ROOT}/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit -u
